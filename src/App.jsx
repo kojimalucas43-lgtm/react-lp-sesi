@@ -2,28 +2,47 @@
 import s from './App.module.css'
 
 import img1 from '/Kd.png'
-import img2 from '/KW.png'
-import img3 from '/TT.png'
+import img2 from '/KW.jpg'
+import img3 from '/TT.webp'
+import vid from '/video.png'
+import home from '/home.png'
+import cont from '/contact.png'
+import box from '/box.png'
 
 
 function App() {
 
+const navTo = (id) => {
+    const element = document.getElementById(id);
+
+    if (element) {
+        element.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+        });
+    }
+};
   return (
     <>
      <nav>
-        <span className={s.navItems} onclick="navTo('s1')">
+
+        <span className={s.navItems} onclick={() => navTo('s1')}>
+            <img src={home} width="60px" alt="home"/>
             <i class="fa-solid fa-house"></i>
             <a className={s.navWords}>Home</a>
         </span>
-        <span className={s.navItems} onclick="navTo('s2')">
+        <span className={s.navItems} onclick={() => navTo('s2')}>
+            <img src={box} width="60px" alt="home"/>
             <i class="fa-solid fa-box"></i>
             <a className={s.navWords}>Produtos</a>
         </span>
-        <span className={s.navItems} onclick="navTo('s3')">
+        <span className={s.navItems} onclick={() => navTo('s3')}>
+            <img src={vid} width="60px" alt="vid"/>
             <i class="fa-solid fa-video"></i>
             <a className={s.navWords}>Video</a>
         </span>
-        <span className={s.navItems} onclick="navTo('s4')">
+        <span className={s.navItems} onclick={() => navTo('s4')}>
+            <img src={cont} width="60px"  alt="cont"/>
             <i class="fa-solid fa-mobile"></i>
             <a className={s.navWords}>Contato</a>
         </span>
@@ -36,7 +55,7 @@ function App() {
  
             
             <div id="basketball-container"></div>
-            <p id="bk-label">arraste para girar</p>
+            <p id="bk-label">Kojima</p>
         </section>
  
         <section id="s2">
@@ -74,7 +93,7 @@ function App() {
                 <input type="text" id="nome" placeholder="Digite seu nome"/>
                 <label for="assunto">Mensagem:</label>
                 <textarea id="assunto" placeholder="Digite uma mensagem"></textarea>
-                <button onclick="enviar()">ENVIAR</button>
+                <button onclick={() => enviar()}>ENVIAR</button>
             </div>
         </section>
     </main>
