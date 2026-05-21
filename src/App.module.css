@@ -122,7 +122,7 @@
     box-shadow: 0px 3px 10px #090909;
 }
 
-.formulario button{
+.button{
     width: 100%;
     padding: 10px;
     background-color: var(--almond-cream);
@@ -134,7 +134,7 @@
     transition: all 200ms ease-in-out;
 }
 
-.formulario button:hover{
+.button:hover{
     cursor: pointer;
     box-shadow: 0px 3px 10px #090909;
     background-color: transparent;

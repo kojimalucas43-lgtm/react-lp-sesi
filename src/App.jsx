@@ -93,7 +93,9 @@ const navTo = (id) => {
                 <input type="text" id="nome" placeholder="Digite seu nome"/>
                 <label for="assunto">Mensagem:</label>
                 <textarea id="assunto" placeholder="Digite uma mensagem"></textarea>
-                <button onclick={() => enviar()}>ENVIAR</button>
+                <div class={button}>
+                    <button onclick={() => enviar()}>ENVIAR</button>
+                </div>
             </div>
         </section>
     </main>
