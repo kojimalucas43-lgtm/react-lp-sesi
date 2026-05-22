@@ -58,12 +58,21 @@ const navTo = (id) => {
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
             <div className={s.navItems}> 
-            
+                <i className="fa-solid fa-house"></i>
+                <a onClick={() => navTo('s1')}>Home</a>
             </div>
-        <a class="nav-link active" aria-current="page" href="#">Home</a>
-        <a class="nav-link" href="#">Features</a>
-        <a class="nav-link" href="#">Pricing</a>
-        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            <div className={s.navitems}>
+                <i className="fa-solid fa-money-bill"></i>
+                <a onClick={() => navTo('s2')}>Produtos</a>
+            </div>
+            <div className={s.navitems}>
+                <i className="fa-solid fa-video"></i>
+                <a onClick={() => navTo('s3')}>Video</a>
+            </div>
+            <div className={s.navitems}>
+                <i className="fa-solid fa-address-book"></i>
+                <a onClick={() => navTo('s4')}>Contato</a>
+        </div>
       </div>
     </div>
   </div>
